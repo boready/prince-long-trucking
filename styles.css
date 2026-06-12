@@ -2632,3 +2632,357 @@ h1 span,
     max-width:145px !important;
   }
 }
+
+
+/* =========================================================
+   MOBILE POLISH FIX
+   Reduces glow, improves word spacing, centers What We Haul.
+   Desktop remains unchanged.
+   ========================================================= */
+
+@media (max-width: 760px){
+
+  h1,
+  h2,
+  h3,
+  .pl-display-heading,
+  .pl-section-heading,
+  .area-main-heading,
+  .gold-heading,
+  .service-copy h2,
+  .section-head h2,
+  .section-heading h2,
+  .haul-strip h2,
+  .fleet h2,
+  .request h2,
+  .final-cta h2{
+    text-shadow:
+      0 0 4px rgba(255,255,255,.10),
+      0 0 7px rgba(216,48,24,.48),
+      0 0 13px rgba(216,48,24,.32),
+      0 4px 0 rgba(0,0,0,.88) !important;
+  }
+
+  .gold-heading,
+  h1 span,
+  .service-copy h2 span,
+  .section-head h2 span,
+  .section-heading h2 span{
+    text-shadow:
+      0 0 5px rgba(248,200,56,.42),
+      0 0 10px rgba(216,48,24,.45),
+      0 4px 0 rgba(0,0,0,.90) !important;
+  }
+
+  h1,
+  .area-main-heading,
+  .gold-heading,
+  .service-copy h2{
+    letter-spacing:.012em !important;
+    word-spacing:.06em !important;
+  }
+
+  .area-main-heading{
+    line-height:.94 !important;
+    margin-bottom:.34em !important;
+  }
+
+  .gold-heading{
+    line-height:.94 !important;
+    margin-top:.10em !important;
+    margin-bottom:.48em !important;
+  }
+
+  .area-main-heading,
+  .gold-heading{
+    font-size:clamp(2.95rem, 13.5vw, 4.65rem) !important;
+  }
+
+  h1{
+    font-size:clamp(3rem, 14vw, 4.9rem) !important;
+    line-height:.94 !important;
+  }
+
+  .haul-strip{
+    padding-top:54px !important;
+  }
+
+  .haul-strip h2,
+  .what-we-haul-title,
+  #services h2{
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    gap:14px !important;
+    width:100% !important;
+    text-align:center !important;
+    font-size:clamp(2.6rem, 13vw, 4.3rem) !important;
+    line-height:.95 !important;
+    margin:0 auto 30px !important;
+    padding:0 10px !important;
+  }
+
+  .haul-strip h2::before,
+  .haul-strip h2::after,
+  .what-we-haul-title::before,
+  .what-we-haul-title::after,
+  #services h2::before,
+  #services h2::after{
+    content:"" !important;
+    display:block !important;
+    flex:1 1 36px !important;
+    max-width:70px !important;
+    height:2px !important;
+    background:linear-gradient(90deg, transparent, #F8C838) !important;
+    box-shadow:0 0 10px rgba(248,200,56,.55) !important;
+  }
+
+  .haul-strip h2::after,
+  .what-we-haul-title::after,
+  #services h2::after{
+    background:linear-gradient(90deg, #F8C838, transparent) !important;
+  }
+
+  .btn,
+  .btn.gold,
+  .btn-primary,
+  a.btn-primary,
+  .sticky-call,
+  a.sticky-call{
+    box-shadow:
+      0 0 10px rgba(248,200,56,.24),
+      0 8px 20px rgba(0,0,0,.55) !important;
+  }
+
+  section{
+    padding-top:54px !important;
+    padding-bottom:54px !important;
+  }
+
+  .hero{
+    padding-top:42px !important;
+  }
+
+  .haul-grid article,
+  .fleet-grid img,
+  .service-card,
+  .fleet-card,
+  .pl-service-card-row article{
+    box-shadow:
+      0 0 10px rgba(216,48,24,.24),
+      0 10px 24px rgba(0,0,0,.58) !important;
+  }
+}
+
+@media (max-width: 430px){
+
+  h1,
+  .area-main-heading,
+  .gold-heading{
+    letter-spacing:.006em !important;
+    word-spacing:.04em !important;
+  }
+
+  .area-main-heading,
+  .gold-heading{
+    font-size:clamp(2.75rem, 14vw, 4.1rem) !important;
+  }
+
+  .service-copy p,
+  .hero p{
+    font-size:1rem !important;
+    line-height:1.62 !important;
+  }
+
+  .haul-strip h2,
+  .what-we-haul-title,
+  #services h2{
+    flex-wrap:wrap !important;
+    gap:10px !important;
+    max-width:360px !important;
+  }
+
+  .haul-strip h2::before,
+  .haul-strip h2::after,
+  .what-we-haul-title::before,
+  .what-we-haul-title::after,
+  #services h2::before,
+  #services h2::after{
+    flex-basis:70px !important;
+  }
+}
+
+
+/* =========================================================
+   FINAL MOBILE HERO LIST FIX
+   Turns the hero service list into two columns and reduces crowding.
+   Desktop remains unchanged.
+   ========================================================= */
+
+@media (max-width: 760px){
+
+  /* Reduce red glow on mobile headings */
+  h1,
+  h2,
+  h3,
+  .hero h1,
+  .hero-title,
+  .section-title,
+  .pl-display-heading,
+  .pl-section-heading,
+  .area-main-heading,
+  .gold-heading,
+  .service-copy h2,
+  .section-head h2,
+  .section-heading h2,
+  .haul-strip h2,
+  .fleet h2,
+  .request h2,
+  .final-cta h2{
+    text-shadow:
+      0 0 4px rgba(255,255,255,.10),
+      0 0 6px rgba(216,48,24,.38),
+      0 0 12px rgba(216,48,24,.24),
+      0 4px 0 rgba(0,0,0,.88) !important;
+  }
+
+  .hero h1,
+  .hero-title,
+  h1{
+    font-size: clamp(3rem, 13.2vw, 4.85rem) !important;
+    line-height: .94 !important;
+    letter-spacing: .01em !important;
+    word-spacing: .05em !important;
+    margin-bottom: 24px !important;
+  }
+
+  .hero h1 span,
+  .gold-heading,
+  h1 span{
+    text-shadow:
+      0 0 5px rgba(248,200,56,.38),
+      0 0 9px rgba(216,48,24,.34),
+      0 4px 0 rgba(0,0,0,.90) !important;
+  }
+
+  /* Hero service list: two columns on mobile */
+  .hero-services,
+  .hero .hero-services,
+  .hero .service-line,
+  .hero-content .service-line,
+  .hero-copy .service-line{
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 12px 14px !important;
+    width: 100% !important;
+    margin: 22px 0 26px !important;
+    padding: 0 !important;
+    align-items: start !important;
+  }
+
+  .hero-services > *,
+  .hero .hero-services > *,
+  .hero .service-line > *,
+  .hero-content .service-line > *,
+  .hero-copy .service-line > *{
+    display: flex !important;
+    align-items: center !important;
+    gap: 9px !important;
+    width: auto !important;
+    min-width: 0 !important;
+    font-size: clamp(.86rem, 3.6vw, 1.03rem) !important;
+    line-height: 1.15 !important;
+    font-weight: 950 !important;
+    text-transform: uppercase !important;
+    white-space: normal !important;
+    letter-spacing: .015em !important;
+    color: #F5F1E6 !important;
+    margin: 0 !important;
+  }
+
+  .hero-services > *::before,
+  .hero .hero-services > *::before,
+  .hero .service-line > *::before,
+  .hero-content .service-line > *::before,
+  .hero-copy .service-line > *::before{
+    content: "" !important;
+    flex: 0 0 18px !important;
+    width: 18px !important;
+    height: 18px !important;
+    margin: 0 !important;
+    border-radius: 999px !important;
+    border: 4px solid #F8C838 !important;
+    background: radial-gradient(circle, #F8C838 0 28%, transparent 31%) !important;
+    box-shadow: 0 0 7px rgba(248,200,56,.46) !important;
+  }
+
+  /* If the existing list has two service-line rows, make them behave as one compact block */
+  .hero .service-line.second,
+  .hero-copy .service-line.second,
+  .hero-content .service-line.second{
+    margin-top: -12px !important;
+  }
+
+  /* Hero paragraph spacing */
+  .hero p,
+  .hero-text{
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+    margin-top: 18px !important;
+  }
+
+  /* Center and fix What We Haul */
+  .haul-strip h2,
+  #services h2,
+  .what-we-haul-title{
+    text-align: center !important;
+    justify-content: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 360px !important;
+    width: 100% !important;
+  }
+
+  /* Softer glows on mobile cards/buttons */
+  .btn,
+  .btn.gold,
+  .btn-primary,
+  a.btn-primary,
+  .sticky-call,
+  a.sticky-call{
+    box-shadow:
+      0 0 8px rgba(248,200,56,.22),
+      0 8px 18px rgba(0,0,0,.52) !important;
+  }
+}
+
+@media (max-width: 430px){
+
+  .hero-services,
+  .hero .hero-services,
+  .hero .service-line,
+  .hero-content .service-line,
+  .hero-copy .service-line{
+    grid-template-columns: 1fr 1fr !important;
+    gap: 11px 10px !important;
+  }
+
+  .hero-services > *,
+  .hero .hero-services > *,
+  .hero .service-line > *,
+  .hero-content .service-line > *,
+  .hero-copy .service-line > *{
+    font-size: .84rem !important;
+  }
+
+  .hero-services > *::before,
+  .hero .hero-services > *::before,
+  .hero .service-line > *::before,
+  .hero-content .service-line > *::before,
+  .hero-copy .service-line > *::before{
+    flex-basis: 16px !important;
+    width: 16px !important;
+    height: 16px !important;
+    border-width: 3px !important;
+  }
+}
