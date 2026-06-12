@@ -38,6 +38,7 @@
   <a class="brand" href="#top" aria-label="Prince and Long Trucking home">
       <img src="assets/logo-transparent.png" alt="Prince & Long Trucking LLC">
     </a>
+  <button class="mobile-menu-toggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
 
   <nav class="nav pl-pro-nav" aria-label="Main navigation">
     <a href="#top">Home</a>
@@ -162,54 +163,52 @@
   </div>
 
   
-  
-  <div class="service-map-panel pl-static-service-area" aria-label="Prince and Long Trucking static Northeast Kansas service area graphic">
+  <div class="service-map-panel pl-pro-map-panel" aria-label="Prince and Long Trucking Northeast Kansas service area">
     <div class="pl-map-titlebar">
-      <h3>Real Service Area</h3>
+      <h3 class="pl-card-heading">Real Service Area</h3>
       <strong>Wamego <span>•</span> Manhattan <span>•</span> Junction City</strong>
     </div>
 
-    <div class="pl-map-graphic">
+    <div class="pl-real-map">
       <div class="pl-map-badge">Based in<br>Wamego, KS</div>
 
-      <div class="road road-main"></div>
-      <div class="road road-west"></div>
-      <div class="road road-north"></div>
-      <div class="road road-south"></div>
-      <div class="road road-east"></div>
+      <div class="pl-road pl-road-24"></div>
+      <div class="pl-road pl-road-70"></div>
+      <div class="pl-road pl-road-99"></div>
+      <div class="pl-road pl-road-177"></div>
 
-      <div class="pin pin-manhattan"><i></i><b>Manhattan</b></div>
-      <div class="pin pin-junction"><i></i><b>Junction City</b></div>
-      <div class="pin pin-stgeorge"><i></i><b>St. George</b></div>
-      <div class="pin pin-wamego base"><i></i><b>Wamego</b></div>
-      <div class="pin pin-westmoreland"><i></i><b>Westmoreland</b></div>
-      <div class="pin pin-alma"><i></i><b>Alma</b></div>
-      <div class="pin pin-paxico"><i></i><b>Paxico</b></div>
+      <div class="pl-pin manhattan"><i></i><b>Manhattan</b></div>
+      <div class="pl-pin junction"><i></i><b>Junction City</b></div>
+      <div class="pl-pin stgeorge"><i></i><b>St. George</b></div>
+      <div class="pl-pin wamego primary"><i></i><b>Wamego</b></div>
+      <div class="pl-pin westmoreland"><i></i><b>Westmoreland</b></div>
+      <div class="pl-pin alma"><i></i><b>Alma</b></div>
+      <div class="pl-pin paxico"><i></i><b>Paxico</b></div>
 
-      <div class="county-strip">Serving Pottawatomie <span>•</span> Riley <span>•</span> Geary <span>•</span> Wabaunsee</div>
+      <div class="pl-counties">Serving Pottawatomie <span>•</span> Riley <span>•</span> Geary <span>•</span> Wabaunsee</div>
     </div>
 
-    <div class="pl-service-card-row">
+    <div class="pl-service-cards">
       <article>
-        <div class="service-icon">▰</div>
+        <div class="pl-service-icon">▰</div>
         <h4>Material<br>Delivery</h4>
         <p>Rock <span>•</span> Dirt <span>•</span> Sand<br>Asphalt Millings</p>
       </article>
 
       <article>
-        <div class="service-icon">▱</div>
+        <div class="pl-service-icon">▱</div>
         <h4>Equipment<br>Hauling</h4>
         <p>Farm Equipment <span>•</span> Skid Steers<br>Construction Equipment</p>
       </article>
 
       <article>
-        <div class="service-icon">▰</div>
+        <div class="pl-service-icon">▰</div>
         <h4>Freight &<br>Specialty</h4>
         <p>One-Off Loads <span>•</span> Local Freight<br>Contractor Support</p>
       </article>
     </div>
 
-    <div class="city-service-row">
+    <div class="pl-city-strip">
       <strong>Serving</strong>
       <span>📍 Wamego</span>
       <span>📍 Manhattan</span>
@@ -262,5 +261,26 @@
   </footer>
 
   <a class="sticky-call" href="tel:17858445001">Call Now</a>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const toggle = document.querySelector(".mobile-menu-toggle");
+  const nav = document.querySelector(".site-header nav, .pl-pro-nav, .nav");
+  if (!toggle || !nav) return;
+
+  toggle.addEventListener("click", function () {
+    const isOpen = document.body.classList.toggle("mobile-menu-open");
+    toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  });
+
+  nav.querySelectorAll("a").forEach(function (link) {
+    link.addEventListener("click", function () {
+      document.body.classList.remove("mobile-menu-open");
+      toggle.setAttribute("aria-expanded", "false");
+    });
+  });
+});
+</script>
+
 </body>
 </html>
