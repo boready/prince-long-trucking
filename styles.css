@@ -2986,3 +2986,74 @@ h1 span,
     border-width: 3px !important;
   }
 }
+
+
+/* =========================================================
+   MOBILE SERVING CITY GRID FIX
+   Converts the bottom Serving city list into 2 rows x 3 columns.
+   Desktop remains unchanged.
+   ========================================================= */
+
+@media (max-width: 768px){
+
+  .city-service-row,
+  .pl-city-strip,
+  .service-cities,
+  .serving-cities,
+  .city-list{
+    display:grid !important;
+    grid-template-columns:repeat(3, 1fr) !important;
+    gap:16px 8px !important;
+    align-items:center !important;
+    justify-items:center !important;
+    padding:18px 12px !important;
+  }
+
+  .city-service-row strong,
+  .pl-city-strip strong{
+    grid-column:1 / -1 !important;
+    justify-self:start !important;
+    width:100% !important;
+    margin-bottom:4px !important;
+    color:#F8C838 !important;
+    text-align:left !important;
+  }
+
+  .city-service-row span,
+  .pl-city-strip span,
+  .service-cities li,
+  .serving-cities li,
+  .city-list li{
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    width:100% !important;
+    text-align:center !important;
+    font-size:.82rem !important;
+    line-height:1.15 !important;
+    font-weight:900 !important;
+    white-space:normal !important;
+    word-break:normal !important;
+  }
+}
+
+@media (max-width: 430px){
+
+  .city-service-row,
+  .pl-city-strip,
+  .service-cities,
+  .serving-cities,
+  .city-list{
+    grid-template-columns:repeat(3, 1fr) !important;
+    gap:14px 6px !important;
+    padding:16px 8px !important;
+  }
+
+  .city-service-row span,
+  .pl-city-strip span,
+  .service-cities li,
+  .serving-cities li,
+  .city-list li{
+    font-size:.72rem !important;
+  }
+}
