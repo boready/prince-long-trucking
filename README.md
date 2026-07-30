@@ -19,3 +19,9 @@ Upload the **contents of this folder** to the root of the `boready/prince-long-t
 `.github/workflows/publish-weekly-article.yml` publishes one queued guide each Wednesday. In **Settings → Actions → General → Workflow permissions**, select **Read and write permissions**. Then run the workflow manually once from the Actions tab to test it.
 
 Queued content is stored in `automation/article_queue.json`. Published slugs are tracked in `automation/published_queue.json`. The workflow updates the Resources index and sitemap automatically.
+
+## Random weekly article publishing
+
+The repository includes `.github/workflows/publish-weekly-article.yml`. It randomly publishes one unpublished article from `automation/article_queue.json` every Wednesday and prevents repeats using `automation/published_queue.json`.
+
+See `WEEKLY-SEO-AUTOMATION.md` for GitHub permission settings and testing instructions.
