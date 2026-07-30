@@ -483,7 +483,7 @@ Every project starts with a conversation. Whether you need rock, dirt, sand, asp
 <div class="calculator-grid">
 <h3 class="calculator-panel-title">Project Information</h3>
 <label class="material-field">What are you working on?
-<select id="calc-project" name="project_type" required="">
+<select id="calc-project" name="project_type" required="" aria-label="Project type">
 <option value="">Choose a project</option>
 <option>New driveway</option>
 <option>Driveway repair or resurfacing</option>
@@ -498,10 +498,10 @@ Every project starts with a conversation. Whether you need rock, dirt, sand, asp
 </select>
 </label>
 <label class="material-field material-description">Describe the material or project <span>(optional)</span>
-<input id="calc-material-details" name="material_details" placeholder="Example: muddy entrance, white driveway rock, or help choosing a material" type="text"/>
+<input id="calc-material-details" name="material_details" placeholder="Example: muddy entrance, white driveway rock, or help choosing a material" type="text"/ aria-label="Material details">
 </label>
 <label class="material-field">What material do you need?
-<select id="calc-material" name="material" required="">
+<select id="calc-material" name="material" required="" aria-label="Material type">
 <option value="">Choose a material</option>
 <option value="Not sure — please recommend a material">Not sure — help me choose</option>
 <option value="Driveway rock">Driveway rock</option>
@@ -525,9 +525,9 @@ Every project starts with a conversation. Whether you need rock, dirt, sand, asp
 <fieldset class="measurement-group">
 <legend>Project measurements</legend>
 <div class="measurement-grid">
-<label>Length <span>(feet)</span><input id="calc-length" inputmode="decimal" min="0.1" name="length_feet" required="" step="0.1" type="number"/></label>
-<label>Width <span>(feet)</span><input id="calc-width" inputmode="decimal" min="0.1" name="width_feet" required="" step="0.1" type="number"/></label>
-<label>Depth <span>(inches)</span><input id="calc-depth" inputmode="decimal" min="0.1" name="depth_inches" required="" step="0.1" type="number"/></label>
+<label>Length <span>(feet)</span><input id="calc-length" inputmode="decimal" min="0.1" name="length_feet" required="" step="0.1" type="number"/ aria-label="Project length in feet"></label>
+<label>Width <span>(feet)</span><input id="calc-width" inputmode="decimal" min="0.1" name="width_feet" required="" step="0.1" type="number"/ aria-label="Project width in feet"></label>
+<label>Depth <span>(inches)</span><input id="calc-depth" inputmode="decimal" min="0.1" name="depth_inches" required="" step="0.1" type="number"/ aria-label="Material depth in inches"></label>
 </div>
 </fieldset>
 <div class="calculator-actions">
