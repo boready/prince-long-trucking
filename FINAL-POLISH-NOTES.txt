@@ -1,0 +1,10 @@
+FINAL POLISH APPLIED
+
+- Optimized PNG/JPG assets where possible.
+- Added loading="lazy" and decoding="async" to image tags.
+- Ensured viewport meta tag exists.
+- Ready for final validation after deployment:
+  * Google Search Console
+  * Rich Results Test
+  * PageSpeed Insights
+  * Social sharing preview
